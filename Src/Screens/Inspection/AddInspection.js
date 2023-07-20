@@ -43,6 +43,8 @@ const AddInspection = props => {
   const [getpicus, SetPiCus] = useState('');
   const [getpicustype, SetPiCusTyp] = useState('');
   const [getpitemp, SetPiTemp] = useState('');
+  const [getpitman, SetPiMan] = useState('');
+  const [getpitmechi, SetPiMechi] = useState('');
   const [getupload, setupload] = useState(0);
   const [createchildmodel, setcreatechildmodel] = useState(false);
   const [getcolor, SetColor] = useState('');
@@ -105,6 +107,18 @@ const AddInspection = props => {
     {id: 4, name: 'Advanced'},
   ];
 
+  const manager = [
+    {id: 1, name: 'Abc'},
+    {id: 2, name: 'xyz'},
+    {id: 3, name: 'Def'},
+  ];
+
+  const mechanic = [
+    {id: 1, name: '123'},
+    {id: 2, name: '456'},
+    {id: 3, name: '789'},
+    {id: 4, name: '012'},
+  ];
   const handleNextForm = () => {
     // Update the progress value based on the current form
     setProgress(progress + 0.48);
@@ -779,7 +793,7 @@ const AddInspection = props => {
               style={{
                 marginTop: metrics.HEIGHT * 0.02,
                 borderRadius: 8,
-                borderColor: red ? 'red' : '#cccbcb',
+                borderColor: '#cccbcb',
                 borderWidth: 0.8,
                 paddingTop: metrics.HEIGHT * 0.01,
                 paddingBottom: metrics.HEIGHT * 0.01,
@@ -941,6 +955,132 @@ const AddInspection = props => {
                 }}
               />
             </View>
+            <View
+              style={{
+                marginTop: metrics.HEIGHT * 0.01,
+              }}>
+              <Text
+                style={{
+                  color: colors.gary,
+                  fontSize: 16,
+                  fontWeight: '700',
+                }}>
+                Manager
+              </Text>
+            </View>
+            <View
+              style={{
+                marginTop: metrics.HEIGHT * 0.01,
+                borderRadius: 8,
+                borderColor: i1 ? 'red' : '#cccbcb',
+                borderWidth: 0.8,
+                paddingTop: metrics.HEIGHT * 0.01,
+                paddingBottom: metrics.HEIGHT * 0.01,
+                backgroundColor: colors.white,
+              }}>
+              <Dropdown
+                data={manager}
+                value={getpitman}
+                placeholder="Select Manager"
+                labelField="name"
+                valueField="id"
+                itemTextStyle={{
+                  color: colors.black,
+                  fontSize: 14,
+                  fontWeight: '600',
+                }}
+                inputSearchStyle={{
+                  color: colors.black,
+                  fontSize: 14,
+                  fontWeight: '600',
+                }}
+                style={{
+                  fontSize: 14,
+                  fontWeight: '600',
+                  color: colors.black,
+                  marginHorizontal: '2%',
+                }}
+                placeholderStyle={{
+                  fontSize: 14,
+                  fontWeight: '600',
+                  color: '#c0bfbf',
+                  paddingHorizontal: 5,
+                }}
+                selectedTextStyle={{
+                  fontSize: 14,
+                  fontWeight: '600',
+                  color: colors.black,
+                  marginLeft: 4,
+                }}
+                onChange={(itemValue, itemIndex) => {
+                  SetPiMan(itemValue);
+                }}
+              />
+            </View>
+
+            <View
+              style={{
+                marginTop: metrics.HEIGHT * 0.01,
+              }}>
+              <Text
+                style={{
+                  color: colors.gary,
+                  fontSize: 16,
+                  fontWeight: '700',
+                }}>
+                Mechanic<Text style={{color: 'red'}}>*</Text>
+              </Text>
+            </View>
+            <View
+              style={{
+                marginTop: metrics.HEIGHT * 0.01,
+                borderRadius: 8,
+                borderColor: i1 ? 'red' : '#cccbcb',
+                borderWidth: 0.8,
+                paddingTop: metrics.HEIGHT * 0.01,
+                paddingBottom: metrics.HEIGHT * 0.01,
+                backgroundColor: colors.white,
+              }}>
+              <Dropdown
+                data={mechanic}
+                value={getpitmechi}
+                placeholder="Select Mechanic"
+                labelField="name"
+                valueField="id"
+                itemTextStyle={{
+                  color: colors.black,
+                  fontSize: 14,
+                  fontWeight: '600',
+                }}
+                inputSearchStyle={{
+                  color: colors.black,
+                  fontSize: 14,
+                  fontWeight: '600',
+                }}
+                style={{
+                  fontSize: 14,
+                  fontWeight: '600',
+                  color: colors.black,
+                  marginHorizontal: '2%',
+                }}
+                placeholderStyle={{
+                  fontSize: 14,
+                  fontWeight: '600',
+                  color: '#c0bfbf',
+                  paddingHorizontal: 5,
+                }}
+                selectedTextStyle={{
+                  fontSize: 14,
+                  fontWeight: '600',
+                  color: colors.black,
+                  marginLeft: 4,
+                }}
+                onChange={(itemValue, itemIndex) => {
+                  SetPiMechi(itemValue);
+                }}
+              />
+            </View>
+
             {/*  Inspection Template */}
             {/*  RO Number */}
             {/* <View

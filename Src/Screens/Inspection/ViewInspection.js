@@ -43,6 +43,29 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import ImageViewer from 'react-native-image-zoom-viewer';
 import LinearGradient from 'react-native-linear-gradient';
 
+const item_data = [
+  {id: 1, name: 'Right', number: '10'},
+  {id: 2, name: 'Recs.', number: '50'},
+  {id: 3, name: 'Priority', number: '35'},
+];
+
+const results_data = [
+  {id: 1, name: 'Right', number: '10', img: require('../../Assets/right.png')},
+  {id: 2, name: 'Recs.', number: '50', img: require('../../Assets/Notes.png')},
+  {
+    id: 3,
+    name: 'Priority',
+    number: '35',
+    img: require('../../Assets/warning.png'),
+  },
+  {
+    id: 4,
+    name: 'Priority',
+    number: '35',
+    img: require('../../Assets/Wrong.png'),
+  },
+];
+
 const ViewInSpection = props => {
   useEffect(() => {
     const unsubscribe = props.navigation.addListener('focus', () => {
@@ -201,6 +224,14 @@ const ViewInSpection = props => {
           <Text style={styles.dTxt}>{getdata.odometer}</Text>
         </View>
         <View style={styles.mainView}>
+          <Text style={styles.mainTxt}>Manager : </Text>
+          <Text style={styles.dTxt}></Text>
+        </View>
+        <View style={styles.mainView}>
+          <Text style={styles.mainTxt}>Mechanic : </Text>
+          <Text style={styles.dTxt}></Text>
+        </View>
+        <View style={styles.mainView}>
           <Text style={styles.mainTxt}>Inspection note : </Text>
           <Text style={styles.dTxt}>{getdata.inspection_note}</Text>
         </View>
@@ -208,6 +239,81 @@ const ViewInSpection = props => {
           <Text style={styles.mainTxt}>Part Requisition : </Text>
           <Text style={styles.dTxt}>{getdata.parts_requisition}</Text>
         </View>
+        <View style={styles.mainView}>
+          <Text style={styles.mainTxt}>items : </Text>
+          <View>
+            <FlatList
+              data={item_data}
+              numColumns={3}
+              renderItem={({item, index}) => {
+                return (
+                  <View
+                    style={{
+                      paddingLeft: '8%',
+                      paddingRight: '8%',
+                    }}>
+                    <Text style={{color: colors.white}}>{item.name}</Text>
+                  </View>
+                );
+              }}
+            />
+            <FlatList
+              data={item_data}
+              numColumns={3}
+              renderItem={({item, index}) => {
+                return (
+                  <View
+                    style={{
+                      paddingLeft: '10%',
+                      paddingRight: '10%',
+                    }}>
+                    <Text style={{color: colors.white}}>{item.number}</Text>
+                  </View>
+                );
+              }}
+            />
+          </View>
+        </View>
+        <View style={styles.mainView}>
+          <Text style={styles.mainTxt}>Results : </Text>
+          <View>
+            <FlatList
+              data={results_data}
+              numColumns={4}
+              renderItem={({item, index}) => {
+                return (
+                  <View
+                    style={{
+                      paddingLeft: '3%',
+                      paddingRight: '3%',
+                    }}>
+                    <Image
+                      source={item.img}
+                      resizeMode="contain"
+                      style={{height: 30, width: 30}}
+                    />
+                  </View>
+                );
+              }}
+            />
+            <FlatList
+              data={results_data}
+              numColumns={4}
+              renderItem={({item, index}) => {
+                return (
+                  <View
+                    style={{
+                      paddingLeft: '6%',
+                      paddingRight: '6%',
+                    }}>
+                    <Text style={{color: colors.white}}>{item.number}</Text>
+                  </View>
+                );
+              }}
+            />
+          </View>
+        </View>
+
         <View
           style={{
             marginTop: '5%',

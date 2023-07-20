@@ -1,0 +1,915 @@
+ <View
+          style={{
+            marginHorizontal: '5%',
+            marginTop: '4%',
+          }}>
+          <Text
+            style={{
+              color: colors.black,
+              fontSize: 16,
+              fontWeight: '500',
+            }}>
+            Front Left Image:
+          </Text>
+
+          {imguri === null || imguri === '' ? (
+            <TouchableOpacity
+              onPress={() => {
+                setisVisible(true);
+              }}
+              style={{
+                borderWidth: 0.5,
+                borderColor: '#c0bfbf',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '4%',
+                borderRadius: 10,
+                //   borderColor: colors.themecolor,
+                //   borderWidth: 2,
+                backgroundColor: colors.white,
+                width: metrics.WIDTH * 0.9,
+                height: metrics.HEIGHT * 0.2,
+                alignSelf: 'center',
+              }}>
+              <Text style={{color: colors.black, fontSize: 22}}>+</Text>
+            </TouchableOpacity>
+          ) : (
+            <View
+              style={{
+                borderWidth: 0.5,
+                borderColor: '#c0bfbf',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '4%',
+                borderRadius: 10,
+                //   borderColor: colors.themecolor,
+                //   borderWidth: 2,
+                backgroundColor: colors.white,
+                width: metrics.WIDTH * 0.9,
+                height: metrics.HEIGHT * 0.28,
+                alignSelf: 'center',
+              }}>
+              <TouchableOpacity
+                onPress={() => {
+                  SetImageModal(true);
+                  SetImage_Url(imguri);
+                }}>
+                <Image
+                  source={{uri: imguri}}
+                  style={{
+                    width: metrics.WIDTH * 0.88,
+                    height: metrics.HEIGHT * 0.18,
+                  }}
+                  resizeMode="contain"
+                />
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                onPress={() => {
+                  setisVisible(true);
+                }}
+                style={{
+                  width: metrics.WIDTH * 0.24,
+                  borderRadius: 13,
+                  flexDirection: 'row',
+                  backgroundColor: colors.themecolor,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  paddingVertical: 10,
+                  marginTop: '3%',
+                }}>
+                <Text
+                  style={{
+                    color: colors.white,
+                    fontWeight: '500',
+                    fontSize: 12,
+                    marginRight: 5,
+                  }}>
+                  EDIT
+                </Text>
+                <MaterialIcons name="edit" size={18} color={colors.white} />
+              </TouchableOpacity>
+            </View>
+          )}
+        </View>
+        <View
+          style={{
+            marginHorizontal: '5%',
+            marginTop: '8%',
+          }}>
+          <Text
+            style={{
+              color: colors.black,
+              fontSize: 16,
+              fontWeight: '500',
+            }}>
+            Front Right Image:
+          </Text>
+
+          {imguri1 === null || imguri1 === '' ? (
+            <TouchableOpacity
+              onPress={() => {
+                setisVisible1(true);
+              }}
+              style={{
+                borderWidth: 0.5,
+                borderColor: '#c0bfbf',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '4%',
+                borderRadius: 10,
+                backgroundColor: colors.white,
+                width: metrics.WIDTH * 0.9,
+                height: metrics.HEIGHT * 0.2,
+                alignSelf: 'center',
+              }}>
+              <Text style={{color: colors.black, fontSize: 22}}>+</Text>
+            </TouchableOpacity>
+          ) : (
+            <View
+              style={{
+                borderWidth: 0.5,
+                borderColor: '#c0bfbf',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '4%',
+                borderRadius: 10,
+                backgroundColor: colors.white,
+                width: metrics.WIDTH * 0.9,
+                height: metrics.HEIGHT * 0.28,
+                alignSelf: 'center',
+              }}>
+              <TouchableOpacity
+                onPress={() => {
+                  SetImageModal(true);
+                  SetImage_Url(imguri1);
+                }}>
+                <Image
+                  source={{uri: imguri1}}
+                  style={{
+                    width: metrics.WIDTH * 0.88,
+                    height: metrics.HEIGHT * 0.18,
+                  }}
+                  resizeMode="contain"
+                />
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                onPress={() => {
+                  setisVisible1(true);
+                }}
+                style={{
+                  width: metrics.WIDTH * 0.24,
+                  borderRadius: 13,
+                  flexDirection: 'row',
+                  backgroundColor: colors.themecolor,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  paddingVertical: 10,
+                  marginTop: '3%',
+                }}>
+                <Text
+                  style={{
+                    color: colors.white,
+                    fontWeight: '500',
+                    fontSize: 12,
+                    marginRight: 5,
+                  }}>
+                  EDIT
+                </Text>
+                <MaterialIcons name="edit" size={18} color={colors.white} />
+              </TouchableOpacity>
+            </View>
+          )}
+        </View>
+        <View
+          style={{
+            marginHorizontal: '5%',
+            marginTop: '8%',
+          }}>
+          <Text
+            style={{
+              color: colors.black,
+              fontSize: 16,
+              fontWeight: '500',
+            }}>
+            Back Left Image:
+          </Text>
+
+          {imguri2 === null || imguri2 === '' ? (
+            <TouchableOpacity
+              onPress={() => {
+                setisVisible2(true);
+              }}
+              style={{
+                borderWidth: 0.5,
+                borderColor: '#c0bfbf',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '4%',
+                borderRadius: 10,
+                backgroundColor: colors.white,
+                width: metrics.WIDTH * 0.9,
+                height: metrics.HEIGHT * 0.2,
+                alignSelf: 'center',
+              }}>
+              <Text style={{color: colors.black, fontSize: 22}}>+</Text>
+            </TouchableOpacity>
+          ) : (
+            <View
+              style={{
+                borderWidth: 0.5,
+                borderColor: '#c0bfbf',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '4%',
+                borderRadius: 10,
+                backgroundColor: colors.white,
+                width: metrics.WIDTH * 0.9,
+                height: metrics.HEIGHT * 0.28,
+                alignSelf: 'center',
+              }}>
+              <TouchableOpacity
+                onPress={() => {
+                  SetImageModal(true);
+                  SetImage_Url(imguri2);
+                }}>
+                <Image
+                  source={{uri: imguri2}}
+                  style={{
+                    width: metrics.WIDTH * 0.88,
+                    height: metrics.HEIGHT * 0.18,
+                  }}
+                  resizeMode="contain"
+                />
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                onPress={() => {
+                  setisVisible2(true);
+                }}
+                style={{
+                  width: metrics.WIDTH * 0.24,
+                  borderRadius: 13,
+                  flexDirection: 'row',
+                  backgroundColor: colors.themecolor,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  paddingVertical: 10,
+                  marginTop: '3%',
+                }}>
+                <Text
+                  style={{
+                    color: colors.white,
+                    fontWeight: '500',
+                    fontSize: 12,
+                    marginRight: 5,
+                  }}>
+                  EDIT
+                </Text>
+                <MaterialIcons name="edit" size={18} color={colors.white} />
+              </TouchableOpacity>
+            </View>
+          )}
+        </View>
+        <View
+          style={{
+            marginHorizontal: '5%',
+            marginTop: '8%',
+          }}>
+          <Text
+            style={{
+              color: colors.black,
+              fontSize: 16,
+              fontWeight: '500',
+            }}>
+            Back Right Image:
+          </Text>
+
+          {imguri3 === null || imguri3 === '' ? (
+            <TouchableOpacity
+              onPress={() => {
+                setisVisible3(true);
+              }}
+              style={{
+                borderWidth: 0.5,
+                borderColor: '#c0bfbf',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '4%',
+                borderRadius: 10,
+                backgroundColor: colors.white,
+                width: metrics.WIDTH * 0.9,
+                height: metrics.HEIGHT * 0.2,
+                alignSelf: 'center',
+              }}>
+              <Text style={{color: colors.black, fontSize: 22}}>+</Text>
+            </TouchableOpacity>
+          ) : (
+            <View
+              style={{
+                borderWidth: 0.5,
+                borderColor: '#c0bfbf',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '4%',
+                borderRadius: 10,
+                //   borderColor: colors.themecolor,
+                //   borderWidth: 2,
+                backgroundColor: colors.white,
+                width: metrics.WIDTH * 0.9,
+                height: metrics.HEIGHT * 0.28,
+                alignSelf: 'center',
+              }}>
+              <TouchableOpacity
+                onPress={() => {
+                  SetImageModal(true);
+                  SetImage_Url(imguri3);
+                }}>
+                <Image
+                  source={{uri: imguri3}}
+                  style={{
+                    width: metrics.WIDTH * 0.88,
+                    height: metrics.HEIGHT * 0.18,
+                  }}
+                  resizeMode="contain"
+                />
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                onPress={() => {
+                  setisVisible3(true);
+                }}
+                style={{
+                  width: metrics.WIDTH * 0.24,
+                  borderRadius: 13,
+                  flexDirection: 'row',
+                  backgroundColor: colors.themecolor,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  paddingVertical: 10,
+                  marginTop: '3%',
+                }}>
+                <Text
+                  style={{
+                    color: colors.white,
+                    fontWeight: '500',
+                    fontSize: 12,
+                    marginRight: 5,
+                  }}>
+                  EDIT
+                </Text>
+                <MaterialIcons name="edit" size={18} color={colors.white} />
+              </TouchableOpacity>
+            </View>
+          )}
+        </View>
+        <View
+          style={{
+            marginHorizontal: '5%',
+            marginTop: '8%',
+          }}>
+          <Text
+            style={{
+              color: colors.black,
+              fontSize: 16,
+              fontWeight: '500',
+            }}>
+            Video upload:
+          </Text>
+          {getdata.video_upload === null ? (
+            <TouchableOpacity
+              onPress={() => {
+                setisVisible4(true);
+              }}
+              style={{
+                borderWidth: 0.5,
+                borderColor: '#c0bfbf',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '4%',
+                borderRadius: 10,
+                //   borderColor: colors.themecolor,
+                //   borderWidth: 2,
+                width: metrics.WIDTH * 0.9,
+                backgroundColor: colors.white,
+                height: metrics.HEIGHT * 0.2,
+                alignSelf: 'center',
+              }}>
+              <Text style={{color: colors.black, fontSize: 22}}>+</Text>
+            </TouchableOpacity>
+          ) : (
+            // {file_Name === '' ? null : (
+            //   <Text
+            //     style={{
+            //       color: colors.black,
+            //       fontSize: 16,
+            //       fontWeight: '500',
+            //     }}>
+            //     {file_Name}
+            //   </Text>
+            // )}
+            <View
+              style={{
+                borderWidth: 0.5,
+                borderColor: '#c0bfbf',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '4%',
+                borderRadius: 10,
+                //   borderColor: colors.themecolor,
+                //   borderWidth: 2,
+                backgroundColor: colors.white,
+                width: metrics.WIDTH * 0.9,
+                height: metrics.HEIGHT * 0.28,
+                alignSelf: 'center',
+              }}>
+              <Video
+                source={{
+                  uri: getdata.video_full_path,
+                }}
+                volume={50}
+                // onError={err => console.log('errr', err)}
+                style={{
+                  width: metrics.WIDTH * 0.85,
+                  height: metrics.HEIGHT * 0.2,
+                  backgroundColor: 'black',
+                }}
+                paused={paused}
+                repeat={false}
+                onEnd={() => {
+                  setPaused(!paused);
+                  // setIndex(index);
+                }}
+                controls={true}
+                resizeMode={'cover'}
+                posterResizeMode={'contain'}
+              />
+              <TouchableOpacity
+                onPress={() => {
+                  setisVisible4(true);
+                }}
+                style={{
+                  width: metrics.WIDTH * 0.24,
+                  borderRadius: 13,
+                  flexDirection: 'row',
+                  backgroundColor: colors.themecolor,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  paddingVertical: 10,
+                  marginTop: '3%',
+                }}>
+                <Text
+                  style={{
+                    color: colors.white,
+                    fontWeight: '500',
+                    fontSize: 12,
+                    marginRight: 5,
+                  }}>
+                  EDIT
+                </Text>
+                <MaterialIcons name="edit" size={18} color={colors.white} />
+              </TouchableOpacity>
+            </View>
+          )}
+        </View>
+
+        <View
+          style={{
+            marginTop: metrics.HEIGHT * 0.02,
+            backgroundColor: colors.white,
+            marginHorizontal: '2%',
+            padding: '3%',
+            elevation: 3,
+            borderRadius: 10,
+          }}>
+          <TouchableOpacity
+            onPress={() => {
+              SetCondition2(!getcondition2);
+            }}
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+            }}>
+            <Text
+              style={{
+                color: colors.black,
+                fontSize: 20,
+                fontWeight: '600',
+              }}>
+              Findings
+            </Text>
+            <AntDesign
+              name={getcondition2 === true ? 'caretup' : 'caretdown'}
+              color={colors.black}
+              size={25}
+            />
+          </TouchableOpacity>
+          {getcondition2 === true ? (
+            <>
+              <FlatList
+                data={getdata.category_id}
+                style={{
+                  marginBottom: '3%',
+                }}
+                renderItem={({item, index}) => {
+                  return (
+                    <>
+                      <View
+                        style={{
+                          //   marginHorizontal: '2.5%',
+                          marginTop: '5%',
+                          justifyContent: 'space-between',
+                        }}>
+                        {onTheway_show === true && getindex === index ? (
+                          <View
+                            style={{
+                              padding: 10,
+                              borderRadius: 5,
+
+                              //   marginTop: metrics.HEIGHT * 0.01,
+                            }}>
+                            <FlatList
+                              data={getsubcat}
+                              renderItem={({item, index}) => {
+                                return (
+                                  <View
+                                    animation="zoomIn"
+                                    style={{
+                                      backgroundColor:
+                                        item.status === 1
+                                          ? '#CFF4F0'
+                                          : item.status === 2
+                                          ? '#FFF07F'
+                                          : item.status === 3
+                                          ? '#FEC5C5'
+                                          : colors.whitesomke,
+                                      padding: 10,
+                                      borderRadius: 5,
+                                      marginBottom: 15,
+                                    }}>
+                                    <View
+                                      style={
+                                        {
+                                          // backgroundColor: colors.whitesomke,
+                                        }
+                                      }>
+                                      <Text
+                                        style={{
+                                          color: colors.themecolor,
+                                          fontSize: 15,
+                                          padding: 2,
+                                          fontWeight: '600',
+                                        }}>
+                                        {item.sub_category.name}
+                                      </Text>
+                                    </View>
+                                    <View
+                                      style={{
+                                        marginTop: '6%',
+                                      }}>
+                                      <Text
+                                        style={{
+                                          color: colors.black,
+                                          fontSize: 14,
+                                          fontWeight: 'bold',
+                                        }}>
+                                        Before Inspection:-
+                                      </Text>
+                                      <Text
+                                        style={{
+                                          color: colors.black,
+                                          fontSize: 14,
+                                          paddingVertical: 2,
+                                        }}>
+                                        {item.note}
+                                      </Text>
+                                      <FlatList
+                                        data={item.image}
+                                        horizontal={true}
+                                        style={{
+                                          marginTop: '1%',
+                                          marginBottom: '2%',
+                                        }}
+                                        renderItem={({item, index}) => {
+                                          return (
+                                            <View
+                                              style={{
+                                                justifyContent: 'center',
+                                                alignItems: 'center',
+                                                borderRadius: 6,
+                                                width: 130,
+                                                backgroundColor: colors.white,
+                                                height: 130,
+                                                marginLeft: 10,
+                                                alignSelf: 'center',
+                                                elevation: 5,
+                                              }}>
+                                              <TouchableOpacity
+                                                onPress={() => {
+                                                  SetImageModal(true);
+                                                  SetImage_index(index);
+                                                  SetImage_Url(
+                                                    item.image_full_path,
+                                                  );
+                                                }}>
+                                                <Image
+                                                  source={{
+                                                    uri: item.image_full_path,
+                                                  }}
+                                                  style={{
+                                                    width: 90,
+                                                    height: 90,
+                                                    alignSelf: 'center',
+                                                  }}
+                                                  resizeMode="center"
+                                                />
+                                              </TouchableOpacity>
+                                              <TouchableOpacity
+                                                onPress={() =>
+                                                  removephoto(item.id)
+                                                }
+                                                style={{
+                                                  backgroundColor:
+                                                    colors.themecolor,
+                                                  width: 110,
+                                                  marginVertical: '4%',
+                                                  elevation: 3,
+                                                  borderRadius: 5,
+                                                }}>
+                                                <Text
+                                                  style={{
+                                                    color: colors.white,
+                                                    textAlign: 'center',
+                                                    paddingVertical: 3,
+                                                  }}>
+                                                  delete
+                                                </Text>
+                                              </TouchableOpacity>
+                                            </View>
+                                          );
+                                        }}
+                                      />
+                                      <Text
+                                        style={{
+                                          color: colors.black,
+                                          fontSize: 14,
+                                          fontWeight: 'bold',
+                                          marginTop: '6%',
+                                        }}>
+                                        After Inspection:-
+                                      </Text>
+                                      <Text
+                                        style={{
+                                          color: colors.black,
+                                          fontSize: 14,
+                                        }}>
+                                        {item.after_note}
+                                      </Text>
+                                      <FlatList
+                                        data={item.afterimage}
+                                        horizontal={true}
+                                        style={{
+                                          marginTop: '1%',
+                                          marginBottom: '2%',
+                                        }}
+                                        renderItem={({item, index}) => {
+                                          return (
+                                            <View
+                                              style={{
+                                                justifyContent: 'center',
+                                                alignItems: 'center',
+                                                borderRadius: 6,
+                                                width: 130,
+                                                backgroundColor: colors.white,
+                                                height: 130,
+                                                marginLeft: 10,
+                                                alignSelf: 'center',
+                                                elevation: 5,
+                                              }}>
+                                              <TouchableOpacity
+                                                onPress={() => {
+                                                  SetImageModal(true);
+                                                  SetImage_index(index);
+                                                  SetImage_Url(
+                                                    item.image_full_path,
+                                                  );
+                                                }}>
+                                                <Image
+                                                  source={{
+                                                    uri: item.image_full_path,
+                                                  }}
+                                                  style={{
+                                                    width: 90,
+                                                    height: 90,
+                                                    alignSelf: 'center',
+                                                  }}
+                                                  resizeMode="center"
+                                                />
+                                              </TouchableOpacity>
+                                              <TouchableOpacity
+                                                onPress={() =>
+                                                  removephoto1(item.id)
+                                                }
+                                                style={{
+                                                  backgroundColor:
+                                                    colors.themecolor,
+                                                  width: 110,
+                                                  marginVertical: '4%',
+                                                  elevation: 3,
+                                                  borderRadius: 5,
+                                                }}>
+                                                <Text
+                                                  style={{
+                                                    color: colors.white,
+                                                    textAlign: 'center',
+                                                    paddingVertical: 3,
+                                                  }}>
+                                                  delete
+                                                </Text>
+                                              </TouchableOpacity>
+                                            </View>
+                                          );
+                                        }}
+                                      />
+                                      <Text
+                                        style={{
+                                          color: colors.black,
+                                          fontSize: 14,
+                                          fontWeight: 'bold',
+                                          marginTop: '6%',
+                                        }}>
+                                        Findings Inspection:-
+                                      </Text>
+                                      <Text
+                                        style={{
+                                          color: colors.black,
+                                          fontSize: 14,
+                                        }}>
+                                        {item.findings_remark}
+                                      </Text>
+                                      <FlatList
+                                        data={item.findings}
+                                        horizontal={true}
+                                        style={{
+                                          marginTop: '1%',
+                                          marginBottom: '2%',
+                                        }}
+                                        renderItem={({item, index}) => {
+                                          return (
+                                            <View
+                                              style={{
+                                                justifyContent: 'center',
+                                                alignItems: 'center',
+                                                borderRadius: 6,
+                                                width: 130,
+                                                backgroundColor: colors.white,
+                                                height: 130,
+                                                marginLeft: 10,
+                                                alignSelf: 'center',
+                                                elevation: 5,
+                                              }}>
+                                              <TouchableOpacity
+                                                onPress={() => {
+                                                  SetImageModal(true);
+                                                  SetImage_index(index);
+                                                  SetImage_Url(
+                                                    item.image_full_path,
+                                                  );
+                                                }}>
+                                                <Image
+                                                  source={{
+                                                    uri: item.image_full_path,
+                                                  }}
+                                                  style={{
+                                                    width: 90,
+                                                    height: 90,
+                                                    alignSelf: 'center',
+                                                  }}
+                                                  resizeMode="center"
+                                                />
+                                              </TouchableOpacity>
+                                              <TouchableOpacity
+                                                onPress={() =>
+                                                  removephoto2(item.id)
+                                                }
+                                                style={{
+                                                  backgroundColor:
+                                                    colors.themecolor,
+                                                  width: 110,
+                                                  marginVertical: '4%',
+                                                  elevation: 3,
+                                                  borderRadius: 5,
+                                                }}>
+                                                <Text
+                                                  style={{
+                                                    color: colors.white,
+                                                    textAlign: 'center',
+                                                    paddingVertical: 3,
+                                                  }}>
+                                                  delete
+                                                </Text>
+                                              </TouchableOpacity>
+                                            </View>
+                                          );
+                                        }}
+                                      />
+                                    </View>
+                                    <TouchableOpacity
+                                      onPress={() => {
+                                        props.navigation.navigate(
+                                          'ChildUpdateIns',
+                                          {
+                                            childdata: item,
+                                            status: getdata.status,
+                                            ins_id: getdata.id,
+                                          },
+                                        );
+                                      }}
+                                      style={{
+                                        marginTop: metrics.HEIGHT * 0.02,
+                                        alignItems: 'center',
+
+                                        marginHorizontal: '5%',
+                                        borderRadius: 8,
+                                        backgroundColor: colors.themecolor,
+                                        height: metrics.HEIGHT * 0.05,
+                                        width: '25%',
+                                        alignSelf: 'flex-end',
+                                        marginBottom: '4%',
+                                        justifyContent: 'center',
+                                      }}>
+                                      <Text
+                                        style={{
+                                          color: colors.white,
+                                          fontSize: 16,
+                                          fontWeight: '600',
+                                        }}>
+                                        Update
+                                      </Text>
+                                    </TouchableOpacity>
+                                  </View>
+                                );
+                              }}
+                            />
+                          </View>
+                        ) : (
+                          <TouchableOpacity
+                            onPress={() => {
+                              setOntheway(true, onTheway_show);
+                              SetIndex(index);
+                              SetSubCat(item.sub_category);
+                            }}
+                            style={{
+                              backgroundColor: colors.white,
+                              borderWidth: 0.5,
+                              borderColor: '#c0bfbf',
+                              padding: 10,
+                              borderRadius: 5,
+                              elevation: 2,
+                            }}>
+                            <Text
+                              style={{
+                                color: colors.themecolor,
+                                fontSize: 18,
+                                fontWeight: '500',
+                              }}>
+                              {item.name}
+                            </Text>
+                          </TouchableOpacity>
+                        )}
+                      </View>
+                    </>
+                  );
+                }}
+              />
+            </>
+          ) : null}
+        </View>
+        <TouchableOpacity
+          onPress={() => Updatechild()}
+          style={{
+            marginTop: metrics.HEIGHT * 0.02,
+            alignItems: 'center',
+
+            marginHorizontal: '4%',
+            borderRadius: 8,
+            backgroundColor: colors.themecolor,
+            height: metrics.HEIGHT * 0.06,
+
+            marginBottom: '4%',
+            justifyContent: 'center',
+          }}>
+          {/* {isloading === true ? (
+              <ActivityIndicator color={colors.white} size="small" />
+            ) : ( */}
+          <Text
+            style={{
+              color: colors.white,
+              fontSize: 18,
+              fontWeight: '600',
+            }}>
+            Update
+          </Text>
+          {/* )} */}
+        </TouchableOpacity>
