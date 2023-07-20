@@ -1,0 +1,16 @@
+export const LOGIN_BEGIN = 'LOGIN_BEGIN';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_ERROR = 'LOGIN_ERROR';
+
+export const RESTORE_TOKEN = 'RESTORE_TOKEN';
+export const LOGOUT_USER = 'LOGOUT_USER';
+
+// Franchise
+export const FRANCHISE_BEGIN = 'FRANCHISE_BEGIN';
+export const FRANCHISE_SUCCESS = 'FRANCHISE_SUCCESS';
+export const FRANCHISE_ERROR = 'FRANCHISE_ERROR';
+
+// Inspection;
+export const INSPECTION_BEGIN = 'INSPECTION_BEGIN';
+export const INSPECTION_SUCCESS = 'INSPECTION_SUCCESS';
+export const INSPECTION_ERROR = 'INSPECTION_ERROR';
